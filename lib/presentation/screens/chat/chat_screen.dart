@@ -33,6 +33,7 @@ class _ChatView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final chatProvider = context.watch<ChatProvider>();
+    print('Cantidad de mensajes: ${chatProvider.messageList.length}');
 
     return SafeArea(
       child: Padding(
@@ -45,6 +46,7 @@ class _ChatView extends StatelessWidget {
                 itemCount: chatProvider.messageList.length,
                 itemBuilder:(context, index) {
                   final message = chatProvider.messageList[index];
+                  
 
                   return ( message.fromWho == FromWho.hers)
                     ? HerMessageBubble( message: message)
