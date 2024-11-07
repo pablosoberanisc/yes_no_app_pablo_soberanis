@@ -19,5 +19,6 @@ class GetYesNoAnswer {
     return yesNoModel.toMessageEntity();
     //Generar un error si algo sale mal 
     //throw UnimplementedError();
+    //Hola
   }
 }
