@@ -30,3 +30,5 @@ class YesNoModel {
       imageUrl: image
     );
 }
+
+//Tarea: agregar la hora en la que se envia el mensaje como en WhatsApp
