@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "yes_no_app_angela_maldonado",
+            "request": "launch",
+            "type": "dart"
+          },
+          {
+            "name": "yes_no_app_angela_maldonado (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+          },
+          {
+            "name": "yes_no_app_angela_maldonado (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+          },
+          {
+            "name": "yes_no_app_angela_maldonado (Edge)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/main.dart",
+            "args": ["--web-browser=edge", "--disable-web-security"]
+          }
+        ]
+      }

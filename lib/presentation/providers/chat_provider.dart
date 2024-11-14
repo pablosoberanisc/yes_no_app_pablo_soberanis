@@ -8,19 +8,24 @@ class ChatProvider extends ChangeNotifier{
   final chatScrollControler = ScrollController();
   final getYesNoAnswer = GetYesNoAnswer();
 
-  List<Message> messageList=[
-    Message(text: "Hola Pablo", fromWho: FromWho.me),
-    Message(text: "¿Hoy gana Vini el balon de oro?", fromWho: FromWho.me),
-  ];
+  List<Message> messageList = [
+  Message(text: 'Hola Messi', fromWho: FromWho.me, timestamp: DateTime.now()),
+    Message(
+        text: 'Soy tu fan',
+        fromWho: FromWho.me,
+        timestamp: DateTime.now()), // Asegúrate de añadir esto
+  
+];
   
 
-  //Enviar un mensaje
+  // Enviar un mensaje
   Future<void> sendMessage(String text) async {
     if (text.isEmpty) return;
     //El mensaje siempre va a ser mi porque yo lo envio 
-    final newMessage = Message(text: text, fromWho: FromWho.me);
-    //Agrega un elemento a lista "messageList"
+   final newMessage= Message(text: text, fromWho: FromWho.me,timestamp: DateTime.now(),);
+    //Agrega un elemento a la lista "messageList"
     messageList.add(newMessage);
+   // print("Cantidad de mensajes en la lista: ${messageList.length}");
 
     if ( text.endsWith('?')){
       herReply();
@@ -32,13 +37,14 @@ class ChatProvider extends ChangeNotifier{
     moveScrollToBottom();
 }
 
-
+// En Javascript el equivalente a future es promesa
     Future<void> herReply() async{
       final herMessage = await getYesNoAnswer.getAnswer();
       messageList.add(herMessage);
       notifyListeners();
 
       moveScrollToBottom();
+      
     }
 
     //Mover el scroll al ultimo mensaje
