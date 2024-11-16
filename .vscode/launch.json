@@ -5,24 +5,24 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "yes_no_app_angela_maldonado",
+            "name": "yes_no_app_pablo_soberanis",
             "request": "launch",
             "type": "dart"
           },
           {
-            "name": "yes_no_app_angela_maldonado (profile mode)",
+            "name": "yes_no_app_pablo_soberanis (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
           },
           {
-            "name": "yes_no_app_angela_maldonado (release mode)",
+            "name": "yes_no_app_pablo_soberanis (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"
           },
           {
-            "name": "yes_no_app_angela_maldonado (Edge)",
+            "name": "yes_no_app_pablo_soberanis (Edge)",
             "request": "launch",
             "type": "dart",
             "program": "lib/main.dart",
